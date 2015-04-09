@@ -9,7 +9,7 @@ public class NetWorkManager {
 		int TYPE_NO_NETWORK = 0;
 		int TYPE_WIFI = 1;
 		int TYPE_MOBILE = 1 << 1;
-		int TYPE_OTHER = 1 << 1;
+		int TYPE_OTHER = 1 << 2;
 	}
 
 	public static int getNetWorkType(Context context) {
