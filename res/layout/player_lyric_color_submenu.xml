@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.konka.music.ui.widget.TouchableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/player_lyric_color_submenu_height"
+    android:background="@drawable/bg_player_submenu"
+    android:clickable="true" > <!-- com.kugou.android.common.widget.TouchableRelativeLayout -->
+
+    <View
+        android:id="@+id/anchor_id_for_center"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/lyric_color_fcff15"
+        android:layout_width="@dimen/player_lyric_color_submenu_item_size"
+        android:layout_height="@dimen/player_lyric_color_submenu_item_size"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/player_lyric_color_submenu_item_margin"
+        android:layout_toLeftOf="@id/anchor_id_for_center"
+        android:background="@drawable/bg_lyric_color_fcff15"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_player_lyric_color_submenu_item_selected" />
+
+    <ImageView
+        android:id="@+id/lyric_color_ff6565"
+        android:layout_width="@dimen/player_lyric_color_submenu_item_size"
+        android:layout_height="@dimen/player_lyric_color_submenu_item_size"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/player_lyric_color_submenu_item_margin"
+        android:layout_toLeftOf="@id/lyric_color_fcff15"
+        android:background="@drawable/bg_lyric_color_ff6565"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_player_lyric_color_submenu_item_selected" />
+
+    <ImageView
+        android:id="@+id/lyric_color_6ee84d"
+        android:layout_width="@dimen/player_lyric_color_submenu_item_size"
+        android:layout_height="@dimen/player_lyric_color_submenu_item_size"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/player_lyric_color_submenu_item_margin"
+        android:layout_toLeftOf="@id/lyric_color_ff6565"
+        android:background="@drawable/bg_lyric_color_6ee84d"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_player_lyric_color_submenu_item_selected" />
+
+    <ImageView
+        android:id="@+id/lyric_color_ffa144"
+        android:layout_width="@dimen/player_lyric_color_submenu_item_size"
+        android:layout_height="@dimen/player_lyric_color_submenu_item_size"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/player_lyric_color_submenu_item_margin"
+        android:layout_toRightOf="@id/anchor_id_for_center"
+        android:background="@drawable/bg_lyric_color_ffa144"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_player_lyric_color_submenu_item_selected" />
+
+    <ImageView
+        android:id="@+id/lyric_color_3cdbe1"
+        android:layout_width="@dimen/player_lyric_color_submenu_item_size"
+        android:layout_height="@dimen/player_lyric_color_submenu_item_size"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/player_lyric_color_submenu_item_margin"
+        android:layout_toRightOf="@id/lyric_color_ffa144"
+        android:background="@drawable/bg_lyric_color_3cdbe1"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_player_lyric_color_submenu_item_selected" />
+
+    <ImageView
+        android:id="@+id/lyric_color_cc58f2"
+        android:layout_width="@dimen/player_lyric_color_submenu_item_size"
+        android:layout_height="@dimen/player_lyric_color_submenu_item_size"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/player_lyric_color_submenu_item_margin"
+        android:layout_toRightOf="@id/lyric_color_3cdbe1"
+        android:background="@drawable/bg_lyric_color_cc58f2"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_player_lyric_color_submenu_item_selected" />
+
+</com.konka.music.ui.widget.TouchableRelativeLayout>

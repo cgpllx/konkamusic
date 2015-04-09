@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/audio_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:minHeight="@dimen/list_item_height" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/list_item_height"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/indicator"
+                android:layout_width="@dimen/playing_indicator_width"
+                android:layout_height="@dimen/playing_indicator_height"
+                android:background="@color/playing_indicator_color" />
+
+            <ImageView
+                android:id="@+id/audio_item_icon"
+                android:layout_width="@dimen/list_item_height"
+                android:layout_height="@dimen/list_item_height"
+                android:layout_marginLeft="@dimen/audio_item_icon_margin_left"
+                android:background="@drawable/btn_default_bg"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/ic_audio_item_local"
+                android:tag="@string/max_text_color" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                style="@style/Kugou.Widget.CheckBox"
+                android:layout_width="@dimen/list_item_height"
+                android:layout_height="@dimen/list_item_height"
+                android:layout_marginLeft="@dimen/audio_item_icon_margin_left"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/audio_item_local_icon"
+                android:layout_width="@dimen/audio_item_local_icon_height"
+                android:layout_height="@dimen/audio_item_local_icon_height"
+                android:layout_marginRight="@dimen/audio_item_local_mark_margin_right"
+                android:background="@drawable/ico_download_success"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/audio_list_item_title_margin_right"
+                    android:layout_toLeftOf="@id/audio_item_hq_icon"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:tag="@string/max_text_color"
+                    android:text="title"
+                    android:textColor="@color/max_text_color"
+                    android:textSize="@dimen/song_list_primary_text_size" />
+
+                <ImageView
+                    android:id="@+id/audio_item_hq_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/audio_item_hq_icon_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_list_bar_icon_mark_margin"
+                    android:background="@drawable/ic_audio_item_hq_mark"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@id/btn_toggle_menu"
+                    android:layout_width="@dimen/list_item_height"
+                    android:layout_height="@dimen/list_item_height"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_default_bg"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="3.0dip"
+                        android:layout_marginRight="@dimen/common_list_bar_divider_marginright"
+                        android:src="@drawable/skin_ic_btn_toggle_menu" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/audio_list_menu_gridview"
+        style="@style/Kugou.Widget.GridView"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/list_menu_item_height"
+        android:background="@color/bg_rightmenu_color"
+        android:gravity="center"
+        android:horizontalSpacing="@dimen/list_menu_item_horizontal_spacing"
+        android:numColumns="5"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="0.0dip"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_marginLeft="@dimen/common_list_bar_divider_marginright"
+        android:layout_marginRight="@dimen/common_list_bar_divider_marginright"
+        android:background="@color/skin_list_divider_color"
+        android:visibility="visible" />
+
+</LinearLayout>

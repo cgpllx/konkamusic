@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/singer_type_sex_bg"
+        android:layout_width="@dimen/singer_type_select_item_width"
+        android:layout_height="@dimen/singer_type_select_item_height"
+        android:background="@drawable/singer_type_man_bg"
+        android:clickable="false"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" />
+
+        <TextView
+            android:id="@+id/singer_type_sex_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:clickable="false"
+            android:drawableLeft="@drawable/singer_type_man_img"
+            android:gravity="center"
+            android:text="男"
+            android:textColor="@color/white"
+            android:textSize="@dimen/singer_type_select_item_text_size" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" />
+    </LinearLayout>
+
+</LinearLayout>

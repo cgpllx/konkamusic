@@ -1,0 +1,32 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.konka.music.MainActivity"
+     >
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/playing_bar_album_size" >
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/insert_music_note"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="center"
+        android:src="@drawable/insert_play_note"
+        android:visibility="gone" />
+<!--         android:background="@drawable/insert_play_note" -->
+    <!-- android:src="@drawable/insert_play_note" -->
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/playing_bar_height"
+        android:layout_gravity="bottom"
+        layout="@layout/playingbar" />
+    <!-- android:layout_alignParentEnd="true" -->
+
+</FrameLayout>

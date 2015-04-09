@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/singerchile_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/singerchile_fragment_listview_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null" >
+    </ListView>
+
+    <include layout="@layout/empty_view" />
+
+    <include
+        android:id="@+id/refresh_layout"
+        layout="@layout/refresh_layout"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/umeng_fb_rootId"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffefefef"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/umeng_fb_bar_bg" >
+
+            <TextView
+                android:id="@+id/umeng_fb_conversation_title"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/UMFeedbackConversationTitle"
+                android:textColor="#ff565656"
+                android:textSize="22.0dip" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/umeng_fb_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="2.0dip"
+            android:layout_marginLeft="9.0dip"
+            android:layout_marginRight="9.0dip"
+            android:layout_marginTop="7.0dip"
+            android:layout_weight="1.0"
+            android:gravity="top"
+            android:hint="请输入您的反馈意见(300字以内)"
+            android:inputType="textNoSuggestions"
+            android:maxEms="10"
+            android:minEms="10"
+            android:paddingLeft="9.0dip"
+            android:paddingTop="10.0dip"
+            android:textColor="#ff737373" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="55.0dip"
+            android:layout_marginTop="2.0dip"
+            android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/umeng_fb_age_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8.0dip" />
+
+            <Spinner
+                android:id="@+id/umeng_fb_gender_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7.0dip"
+                android:layout_toRightOf="@id/umeng_fb_age_spinner" />
+
+            <TextView
+                android:id="@+id/umeng_fb_submit"
+                android:layout_width="70.0dip"
+                android:layout_height="43.0dip"
+                android:layout_alignBaseline="@id/umeng_fb_age_spinner"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8.0dip"
+                android:background="@drawable/umeng_fb_submit_selector"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ProgressBar android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+</RelativeLayout>

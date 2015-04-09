@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff5f5f5"
+    android:orientation="vertical" >
+
+<!--     <include layout="@layout/common_title_bar" /> -->
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_marginTop="15.0dip"
+                android:background="#19000000" />
+
+            <RelativeLayout
+                android:id="@+id/music_alarm_turn_off"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:background="@drawable/kg_userinfo_item_bg_selector" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:paddingBottom="@dimen/music_alarm_item_padding"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="@dimen/music_alarm_item_padding"
+                    android:text="关闭"
+                    android:textColor="#ff333333"
+                    android:textSize="@dimen/textExMediumSize" />
+
+                <ImageView
+                    android:id="@+id/music_alarm_item_checked"
+                    android:layout_width="@dimen/textLargeSize"
+                    android:layout_height="@dimen/textLargeSize"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20.0dip"
+                    android:background="@drawable/kg_check_mark"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_marginBottom="15.0dip"
+                android:background="#19000000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="#19000000" />
+
+            <RelativeLayout
+                android:id="@+id/kg_music_alarm_list_item1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:background="@drawable/kg_userinfo_item_bg_selector" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:paddingBottom="@dimen/music_alarm_item_padding"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="@dimen/music_alarm_item_padding"
+                    android:text="10分钟"
+                    android:textColor="#ff333333"
+                    android:textSize="@dimen/textExMediumSize" />
+
+                <ImageView
+                    android:id="@id/music_alarm_item_checked"
+                    android:layout_width="@dimen/textLargeSize"
+                    android:layout_height="@dimen/textLargeSize"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20.0dip"
+                    android:background="@drawable/kg_check_mark"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_marginLeft="15.0dip"
+                android:background="#19000000" />
+
+            <RelativeLayout
+                android:id="@+id/kg_music_alarm_list_item2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:background="@drawable/kg_userinfo_item_bg_selector" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:paddingBottom="@dimen/music_alarm_item_padding"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="@dimen/music_alarm_item_padding"
+                    android:text="20分钟"
+                    android:textColor="#ff333333"
+                    android:textSize="@dimen/textExMediumSize" />
+
+                <ImageView
+                    android:id="@id/music_alarm_item_checked"
+                    android:layout_width="@dimen/textLargeSize"
+                    android:layout_height="@dimen/textLargeSize"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20.0dip"
+                    android:background="@drawable/kg_check_mark" 
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_marginLeft="15.0dip"
+                android:background="#19000000" />
+
+            <RelativeLayout
+                android:id="@+id/kg_music_alarm_list_item3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:background="@drawable/kg_userinfo_item_bg_selector" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:paddingBottom="@dimen/music_alarm_item_padding"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="@dimen/music_alarm_item_padding"
+                    android:text="30分钟"
+                    android:textColor="#ff333333"
+                    android:textSize="@dimen/textExMediumSize" />
+
+                <ImageView
+                    android:id="@id/music_alarm_item_checked"
+                    android:layout_width="@dimen/textLargeSize"
+                    android:layout_height="@dimen/textLargeSize"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20.0dip"
+                    android:background="@drawable/kg_check_mark"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_marginLeft="15.0dip"
+                android:background="#19000000" />
+
+            <RelativeLayout
+                android:id="@+id/kg_music_alarm_list_item4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:background="@drawable/kg_userinfo_item_bg_selector" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:paddingBottom="@dimen/music_alarm_item_padding"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="@dimen/music_alarm_item_padding"
+                    android:text="1小时"
+                    android:textColor="#ff333333"
+                    android:textSize="@dimen/textExMediumSize" />
+
+                <ImageView
+                    android:id="@id/music_alarm_item_checked"
+                    android:layout_width="@dimen/textLargeSize"
+                    android:layout_height="@dimen/textLargeSize"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20.0dip"
+                    android:background="@drawable/kg_check_mark"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_marginLeft="15.0dip"
+                android:background="#19000000" />
+
+            <RelativeLayout
+                android:id="@+id/kg_music_alarm_list_item5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:background="@drawable/kg_userinfo_item_bg_selector" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:paddingBottom="@dimen/music_alarm_item_padding"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="@dimen/music_alarm_item_padding"
+                    android:text="1.5小时"
+                    android:textColor="#ff333333"
+                    android:textSize="@dimen/textExMediumSize" />
+
+                <ImageView
+                    android:id="@id/music_alarm_item_checked"
+                    android:layout_width="@dimen/textLargeSize"
+                    android:layout_height="@dimen/textLargeSize"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20.0dip"
+                    android:background="@drawable/kg_check_mark"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="#19000000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_marginTop="15.0dip"
+                android:background="#19000000" />
+
+            <RelativeLayout
+                android:id="@+id/music_alarm_custom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:background="@drawable/kg_userinfo_item_bg_selector"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/music_alarm_item_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:paddingBottom="@dimen/music_alarm_item_padding"
+                    android:paddingLeft="15.0dip"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="@dimen/music_alarm_item_padding"
+                    android:text="自定义"
+                    android:textColor="#ff333333"
+                    android:textSize="@dimen/textExMediumSize" />
+
+                <TextView
+                    android:id="@+id/music_alarm_item_subtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toLeftOf="@id/music_alarm_item_checked"
+                    android:layout_toRightOf="@id/music_alarm_item_text"
+                    android:text="0小时0分"
+                    android:textColor="@color/middle_text_color"
+                    android:textSize="@dimen/textLargeSize"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@id/music_alarm_item_checked"
+                    android:layout_width="@dimen/textLargeSize"
+                    android:layout_height="@dimen/textLargeSize"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20.0dip"
+                    android:background="@drawable/kg_check_mark"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_marginBottom="@dimen/music_alarm_item_padding"
+                android:background="#19000000" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" />
+
+            <RelativeLayout
+                android:id="@+id/music_alarm_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10.0dip"
+                android:visibility="visible" >
+
+                <RelativeLayout
+                    android:id="@+id/music_alarm_layout_stop"
+                    android:layout_width="@dimen/music_alarm_bottom_circle_size"
+                    android:layout_height="@dimen/music_alarm_bottom_circle_size"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/music_alarm_slash" >
+
+                    <ImageView
+                        android:id="@+id/music_alarm_roundProgressBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/kg_music_alarm_activity_circle_selected"/>
+<!--                         android_custom:roundColor="#3333ccff" -->
+<!--                         android_custom:roundProgressColor="#9933ccff" -->
+<!--                         android_custom:roundWidth="2.0dip"  -->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/music_alarm_timer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.0"
+                            android:text="@string/music_alarm_init_countdown"
+                            android:textColor="#ff333333"
+                            android:textSize="@dimen/textMediumSize"
+                            android:visibility="gone"
+                             />
+
+                        <TextView
+                            android:id="@+id/music_alarm_count_to_stop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.0"
+                            android:gravity="center"
+                            android:text="@string/music_alarm_to_stop"
+                            android:textColor="#ff333333"
+                            android:textScaleX="0.95"
+                            android:textSize="@dimen/music_alarm_bottom_circle_text_size" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music_alarm_slash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100.0dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" >
+
+                    <View
+                        android:layout_width="55.0dip"
+                        android:layout_height="40.0dip"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/kg_music_alarm_activity_slash"
+                        android:rotation="90.0" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/music_alarm_layout_exit"
+                    android:layout_width="@dimen/music_alarm_bottom_circle_size"
+                    android:layout_height="@dimen/music_alarm_bottom_circle_size"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/music_alarm_slash" >
+
+                    <ImageView
+                        android:id="@id/music_alarm_roundProgressBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/kg_music_alarm_activity_circle_selected" />
+                        
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@id/music_alarm_timer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.0"
+                            android:gravity="center"
+                            android:text="@string/music_alarm_init_countdown"
+                            android:textColor="#ff333333"
+                            android:textSize="@dimen/textMediumSize"
+                            android:visibility="gone"
+                             />
+
+                        <TextView
+                            android:id="@+id/music_alarm_count_to_exit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.0"
+                            android:gravity="center"
+                            android:text="@string/music_alarm_to_exit_nonselected"
+                            android:textColor="#ff333333"
+                            android:textScaleX="0.95"
+                            android:textSize="@dimen/music_alarm_bottom_circle_text_size" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

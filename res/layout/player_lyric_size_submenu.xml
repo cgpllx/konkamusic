@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.konka.music.ui.widget.TouchableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/player_lyric_size_submenu_height"
+    android:background="@drawable/bg_player_submenu"
+    android:clickable="true" >
+
+    <ImageButton
+        android:id="@+id/player_lyric_submenu_size_decrease"
+        android:layout_width="@dimen/player_lyric_size_submenu_item_size"
+        android:layout_height="@dimen/player_lyric_size_submenu_item_size"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/player_lyric_size_submenu_item_margin"
+        android:background="@drawable/btn_default_bg"
+        android:scaleType="center"
+        android:src="@drawable/ic_player_lyric_menu_font_decrease" />
+
+    <ImageButton
+        android:id="@+id/player_lyric_submenu_size_increase"
+        android:layout_width="@dimen/player_lyric_size_submenu_item_size"
+        android:layout_height="@dimen/player_lyric_size_submenu_item_size"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/player_lyric_size_submenu_item_margin"
+        android:background="@drawable/btn_default_bg"
+        android:scaleType="center"
+        android:src="@drawable/ic_player_lyric_menu_font_increase" />
+
+    <com.konka.music.ui.widget.KGSeekBar
+        android:id="@+id/player_lyric_submenu_size_seeker"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/player_seeker_thumb_size"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/player_lyric_submenu_size_increase"
+        android:layout_toRightOf="@id/player_lyric_submenu_size_decrease"
+        android:maxHeight="@dimen/player_seeker_progress_height"
+        android:minHeight="@dimen/player_seeker_progress_height"
+        android:paddingLeft="@dimen/player_lyric_size_submenu_seeker_padding_left"
+        android:paddingRight="@dimen/player_lyric_size_submenu_seeker_padding_right"
+        android:progress="0"
+        android:progressDrawable="@drawable/player_seekbar_progress"
+        android:thumb="@drawable/thumb_kg_seekbar"
+        android:thumbOffset="@dimen/player_seeker_thumb_offset" />
+
+</com.konka.music.ui.widget.TouchableRelativeLayout>

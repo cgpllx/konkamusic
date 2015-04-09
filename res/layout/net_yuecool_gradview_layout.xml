@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.konka.music.ui.view.ProgressLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:progressLayout="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/progress_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    progressLayout:progress="false"
+    progressLayout:progressBackground="#FFFFFF" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <GridView
+                android:id="@+id/net_yuecool_gridview_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:horizontalSpacing="2dp"
+                android:numColumns="2"
+                android:verticalSpacing="2dp" >
+            </GridView>
+        </LinearLayout>
+
+        <include layout="@layout/empty_view" />
+
+        <include
+            android:id="@+id/refresh_layout"
+            layout="@layout/refresh_layout"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</com.konka.music.ui.view.ProgressLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_result_bar"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/search_bar_margin_left"
+    android:layout_marginRight="@dimen/search_bar_margin_left"
+    android:layout_marginTop="12.0dip"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <View
+            android:id="@+id/abort_request_view"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+
+            <requestFocus />
+        </View>
+
+        <AutoCompleteTextView
+            android:id="@+id/search_edit"
+            style="@style/Kugou.Widget.Search.EditText.New"
+            android:layout_width="fill_parent"
+            android:layout_height="42.0dip"
+            android:layout_centerVertical="true"
+            android:completionThreshold="1"
+            android:dropDownSelector="@drawable/seach_dropdown_selector_bg"
+            android:dropDownVerticalOffset="1.0dip"
+            android:hint="@string/navigation_search_hint"
+            android:imeOptions="actionSearch"
+            android:maxLength="50"
+            android:paddingLeft="@dimen/edittextpaddingLeft"
+            android:paddingRight="75.0dip"
+            android:singleLine="true" />
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="1.0dip"
+            android:background="@drawable/btn_default_bg"
+            android:padding="1.0dip"
+            android:src="@drawable/common_search_button" />
+
+        <View
+            android:id="@+id/search_bar_divider"
+            android:layout_width="1.0px"
+            android:layout_height="26.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:layout_toLeftOf="@id/search_button"
+            android:background="#ffbfbfbf"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/search_text_clear_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:layout_toLeftOf="@id/search_bar_divider"
+            android:background="@drawable/common_search_clear_button"
+            android:scaleType="fitCenter"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

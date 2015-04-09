@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.konka.music.ui.widget.TouchableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/player_menu_bg_color"
+    android:clickable="true" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_player_menu_shadow_top" />
+
+    <ImageButton
+        android:id="@+id/player_lyric_menu_font_size"
+        android:layout_width="@dimen/player_lyric_menu_btn_size"
+        android:layout_height="@dimen/player_lyric_menu_btn_size"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/player_lyric_menu_btn_spacing"
+        android:layout_marginRight="@dimen/player_lyric_menu_btn_spacing"
+        android:background="@drawable/btn_default_bg"
+        android:paddingBottom="@dimen/player_lyric_menu_img_padding_bottom"
+        android:scaleType="center"
+        android:src="@drawable/ic_player_lyric_menu_font_size" />
+
+    <TextView
+        android:id="@+id/player_lyric_menu_font_size_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/player_lyric_menu_font_size"
+        android:layout_alignLeft="@id/player_lyric_menu_font_size"
+        android:layout_alignRight="@id/player_lyric_menu_font_size"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingBottom="@dimen/player_lyric_menu_txt_padding_bottom"
+        android:singleLine="true"
+        android:text="@string/player_lyric_menu_font_size"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSmallSize" />
+
+    <ImageButton
+        android:id="@+id/player_lyric_menu_font_color"
+        android:layout_width="@dimen/player_lyric_menu_btn_size"
+        android:layout_height="@dimen/player_lyric_menu_btn_size"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/player_lyric_menu_btn_spacing"
+        android:layout_toLeftOf="@id/player_lyric_menu_font_size"
+        android:background="@drawable/btn_default_bg"
+        android:paddingBottom="@dimen/player_lyric_menu_img_padding_bottom"
+        android:scaleType="center"
+        android:src="@drawable/ic_player_lyric_menu_font_color" />
+
+    <TextView
+        android:id="@+id/player_lyric_menu_font_color_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/player_lyric_menu_font_color"
+        android:layout_alignLeft="@id/player_lyric_menu_font_color"
+        android:layout_alignRight="@id/player_lyric_menu_font_color"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingBottom="@dimen/player_lyric_menu_txt_padding_bottom"
+        android:singleLine="true"
+        android:text="@string/player_lyric_menu_font_color"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSmallSize" />
+
+    <ImageButton
+        android:id="@+id/player_lyric_menu_lyric_backward"
+        android:layout_width="@dimen/player_lyric_menu_btn_size"
+        android:layout_height="@dimen/player_lyric_menu_btn_size"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/player_lyric_menu_btn_spacing"
+        android:layout_toRightOf="@id/player_lyric_menu_font_size"
+        android:background="@drawable/btn_default_bg"
+        android:paddingBottom="@dimen/player_lyric_menu_img_padding_bottom"
+        android:scaleType="center"
+        android:src="@drawable/ic_player_lyric_menu_lyric_backward" />
+
+    <TextView
+        android:id="@+id/player_lyric_menu_lyric_backward_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/player_lyric_menu_lyric_backward"
+        android:layout_alignLeft="@id/player_lyric_menu_lyric_backward"
+        android:layout_alignRight="@id/player_lyric_menu_lyric_backward"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingBottom="@dimen/player_lyric_menu_txt_padding_bottom"
+        android:singleLine="true"
+        android:text="@string/player_lyric_menu_lyric_backward"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSmallSize" />
+
+    <ImageButton
+        android:id="@+id/player_lyric_menu_lyric_search"
+        android:layout_width="@dimen/player_lyric_menu_btn_size"
+        android:layout_height="@dimen/player_lyric_menu_btn_size"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/player_lyric_menu_font_color"
+        android:background="@drawable/btn_default_bg"
+        android:paddingBottom="@dimen/player_lyric_menu_img_padding_bottom"
+        android:scaleType="center"
+        android:src="@drawable/ic_player_lyric_menu_lyric_search" />
+
+    <TextView
+        android:id="@+id/player_lyric_menu_lyric_search_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/player_lyric_menu_lyric_search"
+        android:layout_alignLeft="@id/player_lyric_menu_lyric_search"
+        android:layout_alignRight="@id/player_lyric_menu_lyric_search"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingBottom="@dimen/player_lyric_menu_txt_padding_bottom"
+        android:singleLine="true"
+        android:text="@string/player_lyric_menu_lyric_search"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSmallSize" />
+
+    <ImageButton
+        android:id="@+id/player_lyric_menu_lyric_forward"
+        android:layout_width="@dimen/player_lyric_menu_btn_size"
+        android:layout_height="@dimen/player_lyric_menu_btn_size"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/player_lyric_menu_lyric_backward"
+        android:background="@drawable/btn_default_bg"
+        android:paddingBottom="@dimen/player_lyric_menu_img_padding_bottom"
+        android:scaleType="center"
+        android:src="@drawable/ic_player_lyric_menu_lyric_forward" />
+
+    <TextView
+        android:id="@+id/player_lyric_menu_lyric_forward_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/player_lyric_menu_lyric_forward"
+        android:layout_alignLeft="@id/player_lyric_menu_lyric_forward"
+        android:layout_alignRight="@id/player_lyric_menu_lyric_forward"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingBottom="@dimen/player_lyric_menu_txt_padding_bottom"
+        android:singleLine="true"
+        android:text="@string/player_lyric_menu_lyric_forward"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSmallSize" />
+
+</com.konka.music.ui.widget.TouchableRelativeLayout>

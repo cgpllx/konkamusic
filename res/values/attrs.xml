@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="vpiTabPageIndicatorStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="ProgressLayout">
+        <attr name="progressBackground" format="color" />
+        <attr name="progress" format="boolean" />
+    </declare-styleable>
+
+</resources>

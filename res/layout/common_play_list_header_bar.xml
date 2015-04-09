@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common_netsong_list_header_bar"
+    android:layout_width="fill_parent"
+   android:layout_height="50dp"
+    android:background="@drawable/bg_player"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/common_play_list_header_bar_image_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/list_common_bar_header_height"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/common_play_list_header_bar_allplay"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_viewgroup_button"
+                android:gravity="center_vertical|start"
+                android:orientation="horizontal"
+                android:paddingEnd="0dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="0dp"
+                android:paddingStart="20dp" >
+
+                <ImageButton
+                    android:id="@+id/common_play_list_header_bar_randomplay_imagebutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3.0dp"
+                    android:layout_marginRight="3.0dip"
+                    android:background="@drawable/skin_image_ic_list_common_bar_header_allplay"
+                    android:clickable="false"
+                    android:contentDescription="@string/app_name"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:tag="skin_image_ic_list_common_bar_header_allplay" />
+
+                <TextView
+                    android:id="@+id/common_play_list_header_bar_randomplay_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="@string/max_text_color"
+                    android:text="@string/playmode_repeat_all_play"
+                    android:textColor="@color/max_text_color"
+                    android:textSize="@dimen/textMediumSize" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="5.0dip"
+                android:visibility="gone"
+                android:layout_marginTop="5.0dip"
+                android:background="@color/common_headr_operation_bar_color" />
+
+            <LinearLayout
+                android:id="@+id/common_play_list_header_bar_all_favorite"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_viewgroup_button"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingEnd="3.0dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="3.0dip"
+                android:paddingStart="0dp"
+                android:visibility="gone" >
+
+                <ImageButton
+                    android:id="@+id/common_play_list_header_bar_all_favorite_imagebutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3.0dp"
+                    android:layout_marginRight="3.0dip"
+                    android:background="@drawable/skin_image_ic_list_common_bar_header_all_favorite"
+                    android:clickable="false"
+                    android:contentDescription="@string/app_name"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:tag="skin_image_ic_list_common_bar_header_all_favorite" />
+
+                <TextView
+                    android:id="@+id/common_play_list_header_bar_all_favorite_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="@string/max_text_color"
+                    android:text="@string/pop_menu_favorite"
+                    android:textColor="@color/max_text_color"
+                    android:textSize="@dimen/textMediumSize"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent" android:visibility="gone" 
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:background="@color/common_headr_operation_bar_color" />
+
+            <LinearLayout
+                android:id="@+id/common_play_list_header_bar_editmode"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="4"
+                android:visibility="gone"
+                android:background="@drawable/bg_viewgroup_button"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/common_play_list_header_bar_editmode_imagebutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3.0dp"
+                    android:layout_marginRight="3.0dip"
+                    android:background="@drawable/skin_image_ic_list_common_bar_header_editmode"
+                    android:clickable="false"
+                    android:contentDescription="@string/app_name"
+                    android:focusable="false"
+                    android:visibility="gone"
+                    android:focusableInTouchMode="false"
+                    android:tag="skin_image_ic_list_common_bar_header_editmode" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@color/common_headr_operation_line_color"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_header_bar_line"
+        android:contentDescription="@string/app_name" />
+
+</LinearLayout>

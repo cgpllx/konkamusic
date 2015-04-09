@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clickable="false" >
+
+    <RelativeLayout
+        android:id="@+id/hide_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/singer_type_select_layout_padding_left_right"
+        android:paddingRight="@dimen/singer_type_select_layout_padding_left_right"
+        android:paddingTop="@dimen/singer_type_select_layout_margin_top" >
+
+        <include
+            android:id="@+id/singer_type_man"
+            android:layout_width="@dimen/singer_type_select_item_width"
+            android:layout_height="@dimen/singer_type_select_item_height"
+            android:layout_alignParentLeft="true"
+            layout="@layout/singer_type_select_item"
+            android:clickable="true" />
+
+        <include
+            android:id="@+id/singer_type_woman"
+            android:layout_width="@dimen/singer_type_select_item_width"
+            android:layout_height="@dimen/singer_type_select_item_height"
+            android:layout_centerHorizontal="true"
+            layout="@layout/singer_type_select_item"
+            android:clickable="true" />
+
+        <include
+            android:id="@+id/singer_type_group"
+            android:layout_width="@dimen/singer_type_select_item_width"
+            android:layout_height="@dimen/singer_type_select_item_height"
+            android:layout_alignParentRight="true"
+            layout="@layout/singer_type_select_item"
+            android:clickable="true" />
+
+        <TextView
+            android:id="@+id/heat_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/singer_type_man"
+            android:layout_marginTop="@dimen/singer_type_select_text_margin_top"
+            android:text="@string/singer_heat"
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/textMediumSize" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/singer_type_select_diverder_height"
+            android:layout_below="@id/heat_singer"
+            android:layout_marginTop="@dimen/singer_type_select_diverder_margin_top"
+            android:background="@color/skin_color_divider_color" />
+    </RelativeLayout>
+
+</LinearLayout>

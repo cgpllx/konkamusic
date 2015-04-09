@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/guide_viewpager"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     >
+
+</android.support.v4.view.ViewPager>
+<!-- <ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/guide_viewflipper"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/guide1" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/guide2" />   
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/guide3"
+        >
+        <ImageView
+            android:id="@+id/guide_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="40dip"
+            android:background="@drawable/guide_in" />
+    </RelativeLayout>
+
+</ViewFlipper>  -->

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigation_search_result_bar"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <View
+        android:id="@+id/navigation_abort_request_view"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <requestFocus />
+    </View>
+
+    <AutoCompleteTextView
+        android:id="@+id/navigation_search_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/navigation_search_height"
+        android:layout_centerVertical="true"
+        android:background="@drawable/navigation_search_edit_bg"
+        android:completionThreshold="1"
+        android:dropDownSelector="@drawable/seach_dropdown_selector_bg"
+        android:dropDownVerticalOffset="1.0dip"
+        android:hint="@string/navigation_search_hint"
+        android:imeOptions="actionSearch"
+        android:maxLength="50"
+        android:paddingLeft="@dimen/navigation_search_text_margin_left"
+        android:paddingRight="75.0dip"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHint="@color/navigation_search_hint_color"
+        android:textSize="@dimen/textMediumSize" />
+
+    <ImageButton
+        android:id="@+id/navigation_search_button"
+        android:layout_width="@dimen/navigation_search_icon_size"
+        android:layout_height="@dimen/navigation_search_icon_size"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5.0dip"
+        android:background="@drawable/btn_default_bg"
+        android:padding="1.0dip"
+        android:scaleType="center"
+        android:src="@drawable/ic_navigation_search" />
+
+    <View
+        android:id="@+id/navigation_search_bar_divider"
+        android:layout_width="1.0px"
+        android:layout_height="26.0dip"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5.0dip"
+        android:layout_toLeftOf="@id/navigation_search_button"
+        android:background="#ff9a9b96"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/navigation_search_text_clear_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10.0dip"
+        android:layout_toLeftOf="@id/navigation_search_bar_divider"
+        android:background="@drawable/navigation_search_clear_button"
+        android:scaleType="fitCenter"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants" >
+
+    <View
+        android:id="@+id/play_indicator"
+        android:layout_width="4dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:background="@color/holo_blue_dark"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/track_popup_menu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:alpha="0.6"
+        android:background="@drawable/button_backround_light"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_popupmenu_holo_light" />
+
+    <RelativeLayout
+        android:id="@+id/song_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/track_popup_menu"
+        android:layout_toStartOf="@id/track_popup_menu"
+        android:layout_toRightOf="@id/play_indicator"
+        android:layout_toEndOf="@id/play_indicator"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp" >
+
+        <TextView
+            android:id="@+id/textview_music_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:singleLine="true"
+            android:text="text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/textview_music_singer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/textview_music_title"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:singleLine="true"
+            android:text="text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/grey_dark"
+            android:textIsSelectable="false" />
+    </RelativeLayout>
+
+</RelativeLayout>

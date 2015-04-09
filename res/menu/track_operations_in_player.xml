@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/track_addto"
+        android:icon="@drawable/statusbar_logo_big"
+        android:title="@string/add_to_playlist"/>
+    <item
+        android:id="@+id/track_info"
+        android:icon="@drawable/statusbar_logo_big"
+        android:title="@string/check_detail">
+    </item>
+
+</menu>

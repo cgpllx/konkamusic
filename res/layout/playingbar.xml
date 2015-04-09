@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/playing_bar_height"
+     >
+
+    <ImageView
+        android:id="@+id/playing_bar_shadow"
+        android:layout_width="fill_parent"
+        android:layout_height="10.0dip"
+        android:background="@drawable/playing_bar_shadow"
+        android:contentDescription="@string/imagecontentDescription" />
+
+    <View
+        android:id="@+id/playing_bar_clickable_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/playing_bar_child_marginTop"
+        android:background="@drawable/bg_playing_bar" />
+
+    <View
+        android:id="@+id/playing_bar_clickable_bg_flash"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/playing_bar_child_marginTop"
+        android:background="@color/transparent" />
+
+    <ImageView
+        android:id="@+id/playing_bar_albumart"
+        android:layout_width="@dimen/playing_bar_album_size"
+        android:layout_height="@dimen/playing_bar_album_size"
+        android:layout_marginTop="@dimen/playing_bar_child_marginTop"
+        android:contentDescription="@string/imagecontentDescription"
+        android:padding="@dimen/playing_bar_album_padding"
+        android:scaleType="fitCenter"
+        android:src="@drawable/playing_bar_default_avatar" />
+
+    <ImageButton
+        android:id="@+id/playing_bar_next"
+        android:layout_width="@dimen/playing_bar_btn_width"
+        android:layout_height="@dimen/playing_bar_btn_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/btn_default_bg"
+        android:contentDescription="@string/imagecontentDescription"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_playing_bar_next" />
+
+    <ImageButton
+        android:id="@+id/playing_bar_toggle"
+        android:layout_width="@dimen/playing_bar_btn_width"
+        android:layout_height="@dimen/playing_bar_btn_height"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/playing_bar_next"
+        android:layout_toStartOf="@id/playing_bar_next"
+        android:background="@drawable/btn_default_bg"
+        android:contentDescription="@string/imagecontentDescription"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_playing_bar_play" />
+
+    <TextView
+        android:id="@+id/playing_bar_song_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/playing_bar_album_size"
+        android:layout_marginStart="@dimen/playing_bar_album_size"
+        android:ellipsize="end"
+        android:maxWidth="@dimen/playing_bar_primary_text_max_width"
+        android:paddingBottom="@dimen/playing_bar_name_paddingBottom"
+        android:paddingEnd="0dp"
+        android:paddingLeft="@dimen/playing_bar_right_paddingLeft"
+        android:paddingRight="0dp"
+        android:paddingStart="@dimen/playing_bar_right_paddingLeft"
+        android:paddingTop="@dimen/playing_bar_name_paddingTop"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textColor="@color/playing_bar_primary_text_color"
+        android:textSize="@dimen/playing_bar_primary_text_size" />
+
+    <ImageView
+        android:id="@+id/playing_bar_buffering_icon"
+        android:layout_width="@dimen/playing_bar_icon_size"
+        android:layout_height="@dimen/playing_bar_icon_size"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/playing_bar_name_paddingBottom"
+        android:layout_marginTop="@dimen/playing_bar_name_paddingTop"
+        android:layout_toEndOf="@id/playing_bar_song_name"
+        android:layout_toRightOf="@id/playing_bar_song_name"
+        android:contentDescription="@string/imagecontentDescription"
+        android:scaleType="center"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playing_bar_song_name"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/playing_bar_singer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/playing_bar_icon_size"
+            android:layout_marginLeft="@dimen/playing_bar_album_size"
+            android:layout_marginStart="@dimen/playing_bar_album_size"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxWidth="@dimen/playing_bar_secondary_text_max_width"
+            android:paddingEnd="0dp"
+            android:paddingLeft="@dimen/playing_bar_right_paddingLeft"
+            android:paddingRight="0dp"
+            android:paddingStart="@dimen/playing_bar_right_paddingLeft"
+            android:singleLine="true"
+            android:text="@string/spread_good_music"
+            android:textColor="@color/playing_bar_secondary_text_color"
+            android:textSize="@dimen/playing_bar_secondary_text_size" />
+
+        <ImageView
+            android:id="@+id/playing_bar_net_type"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/playing_bar_icon_size"
+            android:contentDescription="@string/imagecontentDescription"
+            android:scaleType="center"
+            android:src="@drawable/ic_playing_bar_state_local"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/playing_unicom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/playing_bar_icon_gap"
+            android:layout_marginStart="@dimen/playing_bar_icon_gap"
+            android:contentDescription="@string/imagecontentDescription"
+            android:scaleType="center"
+            android:src="@drawable/btn_download_flow"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/playing_bar_quality"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/playing_bar_icon_size"
+            android:layout_marginLeft="@dimen/playing_bar_icon_gap"
+            android:layout_marginStart="@dimen/playing_bar_icon_gap"
+            android:contentDescription="@string/imagecontentDescription"
+            android:scaleType="center"
+            android:src="@drawable/ic_audio_item_hq_mark"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/playing_bar_fm_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/playing_bar_icon_size"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginStart="10.0dip"
+            android:contentDescription="@string/imagecontentDescription"
+            android:scaleType="center"
+            android:src="@drawable/ic_playing_bar_fm"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/playing_bar_fm_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/playing_bar_icon_size"
+            android:layout_marginLeft="@dimen/playing_bar_icon_gap"
+            android:layout_marginStart="@dimen/playing_bar_icon_gap"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/playing_bar_secondary_text_color"
+            android:textSize="@dimen/playing_bar_secondary_text_size"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <com.konka.music.ui.widget.KGSeekBar
+        android:id="@+id/playing_bar_seeker"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/playing_bar_seeker_thumb_size"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/playing_bar_seeker_marginTop"
+        android:max="1000"
+        android:saveEnabled="false"
+        android:clickable="false"
+        android:maxHeight="@dimen/playing_bar_seeker_progress_height"
+        android:minHeight="@dimen/playing_bar_seeker_progress_height"
+        android:paddingEnd="@dimen/playing_bar_seekbar_paddingRight"
+        android:paddingLeft="@dimen/playing_bar_seekbar_paddingLeft"
+        android:paddingRight="@dimen/playing_bar_seekbar_paddingRight"
+        android:paddingStart="@dimen/playing_bar_seekbar_paddingLeft"
+        android:progressDrawable="@drawable/playing_bar_seekbar_progress"
+        android:thumb="@drawable/thumb_playing_bar_seekbar"
+        android:thumbOffset="@dimen/playing_bar_seeker_thumb_offset" />
+
+    <ImageView
+        android:id="@+id/playing_bar_round_lighting_pot"
+        android:layout_width="@dimen/playing_bar_album_size"
+        android:layout_height="@dimen/playing_bar_album_size"
+        android:layout_marginTop="@dimen/playing_bar_child_marginTop"
+        android:background="@drawable/playing_bar_lighting_round"
+        android:contentDescription="@string/imagecontentDescription"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/playing_bar_round_lighting_hand"
+        android:layout_width="@dimen/playing_bar_album_size"
+        android:layout_height="@dimen/playing_bar_album_size"
+        android:layout_marginTop="@dimen/playing_bar_child_marginTop"
+        android:background="@drawable/playing_bar_round_lighting_hand"
+        android:contentDescription="@string/imagecontentDescription"
+        android:visibility="gone" />
+
+</RelativeLayout>

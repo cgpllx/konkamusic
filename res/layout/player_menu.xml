@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.konka.music.ui.widget.TouchableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/player_menu_bg_color"
+    android:clickable="false" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_player_menu_shadow_top" />
+
+    <ImageView
+        android:id="@+id/player_menu_volume_icon"
+        android:layout_width="@dimen/player_menu_volume_icon_size"
+        android:layout_height="@dimen/player_menu_volume_icon_size"
+        android:layout_alignLeft="@+id/player_menu_volume_seeker"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/player_menu_volume_icon_margin_bottom"
+        android:scaleType="center"
+        android:src="@drawable/ic_player_menu_volume" />
+
+    <com.konka.music.ui.widget.KGSeekBar
+        android:id="@+id/player_menu_volume_seeker"
+        android:layout_width="@dimen/player_menu_volume_seeker_width"
+        android:layout_height="@dimen/player_seeker_thumb_size"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/player_menu_volume_seeker_margin_bottom"
+        android:maxHeight="@dimen/player_seeker_progress_height"
+        android:minHeight="@dimen/player_seeker_progress_height"
+        android:paddingLeft="@dimen/player_menu_volume_seeker_padding_left"
+        android:paddingRight="@dimen/player_menu_volume_seeker_padding_right"
+        android:progress="0"
+        android:progressDrawable="@drawable/player_seekbar_progress"
+        android:thumb="@drawable/thumb_kg_seekbar"
+        android:thumbOffset="@dimen/player_seeker_thumb_offset" />
+
+    <LinearLayout
+        android:id="@+id/btn_onekey_increase_volumn_container"
+        android:layout_width="@dimen/player_menu_volume_seeker_padding_right"
+        android:layout_height="@dimen/player_seeker_thumb_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@id/player_menu_volume_seeker"
+        android:layout_gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="right|center" >
+
+        <CheckBox
+            android:id="@+id/player_menu_volume_onekeyincrease"
+            android:layout_width="@dimen/btn_onekey_increase_volumn_width"
+            android:layout_height="@dimen/btn_onekey_increase_volumn_height"
+            android:layout_gravity="center_vertical"
+            android:button="@drawable/btn_onekeyincrease_volumn"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/player_menu_volume_onekeyincrease_disable"
+            android:layout_width="@dimen/btn_onekey_increase_volumn_width"
+            android:layout_height="@dimen/btn_onekey_increase_volumn_height"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/btn_onekeyincrease_volumn_disabled" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/player_menu_mv"
+        android:layout_width="@dimen/player_menu_btn_spacing"
+        android:layout_height="0.0dip"
+        android:layout_above="@id/player_menu_volume_seeker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="0.0dip"
+        android:layout_marginRight="0.0dip"
+        android:background="@drawable/btn_default_bg"
+        android:paddingBottom="@dimen/player_menu_img_padding_bottom"
+        android:scaleType="center"
+        android:src="@drawable/ic_player_menu_share" />
+
+    <TextView
+        android:id="@+id/player_menu_mv_txt"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_alignBottom="@id/player_menu_mv"
+        android:layout_alignLeft="@id/player_menu_mv"
+        android:layout_alignRight="@id/player_menu_mv"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingBottom="@dimen/player_menu_txt_padding_bottom"
+        android:singleLine="true"
+        android:text="@string/player_menu_share"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSmallSize" />
+
+    <ImageButton
+        android:id="@+id/player_menu_add_to_playlist"
+        android:layout_width="@dimen/player_menu_btn_size"
+        android:layout_height="@dimen/player_menu_btn_size"
+        android:layout_above="@id/player_menu_volume_seeker"
+        android:layout_marginLeft="@dimen/player_menu_btn_spacing"
+        android:layout_toLeftOf="@id/player_menu_mv"
+        android:background="@drawable/btn_default_bg"
+        android:paddingBottom="@dimen/player_menu_img_padding_bottom"
+        android:scaleType="center"
+        android:src="@drawable/ic_player_menu_add_to_playlist" />
+
+    <TextView
+        android:id="@+id/player_menu_add_to_playlist_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/player_menu_add_to_playlist"
+        android:layout_alignLeft="@id/player_menu_add_to_playlist"
+        android:layout_alignRight="@id/player_menu_add_to_playlist"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingBottom="@dimen/player_menu_txt_padding_bottom"
+        android:singleLine="true"
+        android:text="@string/player_menu_add_to_playlist"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSmallSize" />
+
+    <ImageButton
+        android:id="@+id/player_menu_details"
+        android:layout_width="@dimen/player_menu_btn_size"
+        android:layout_height="@dimen/player_menu_btn_size"
+        android:layout_above="@id/player_menu_volume_seeker"
+        android:layout_marginRight="@dimen/player_menu_btn_spacing"
+        android:layout_toRightOf="@id/player_menu_mv"
+        android:background="@drawable/btn_default_bg"
+        android:paddingBottom="@dimen/player_menu_img_padding_bottom"
+        android:scaleType="center"
+        android:src="@drawable/ic_player_menu_details" />
+
+    <TextView
+        android:id="@+id/player_menu_details_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/player_menu_details"
+        android:layout_alignLeft="@id/player_menu_details"
+        android:layout_alignRight="@id/player_menu_details"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingBottom="@dimen/player_menu_txt_padding_bottom"
+        android:singleLine="true"
+        android:text="@string/player_menu_details"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSmallSize" />
+
+    <ImageButton
+        android:id="@+id/player_menu_download"
+        android:layout_width="@dimen/player_menu_btn_size"
+        android:layout_height="@dimen/player_menu_btn_size"
+        android:layout_above="@id/player_menu_volume_seeker"
+        android:layout_toLeftOf="@id/player_menu_add_to_playlist"
+        android:background="@drawable/btn_default_bg"
+        android:paddingBottom="@dimen/player_menu_img_padding_bottom"
+        android:scaleType="center"
+        android:src="@drawable/ic_player_menu_downloaded" />
+
+    <TextView
+        android:id="@+id/player_menu_download_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/player_menu_download"
+        android:layout_alignLeft="@id/player_menu_download"
+        android:layout_alignRight="@id/player_menu_download"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingBottom="@dimen/player_menu_txt_padding_bottom"
+        android:singleLine="true"
+        android:text="@string/player_menu_download"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSmallSize" />
+
+    <ImageButton
+        android:id="@+id/player_menu_search_photo"
+        android:layout_width="@dimen/player_menu_btn_size"
+        android:layout_height="@dimen/player_menu_btn_size"
+        android:layout_above="@id/player_menu_volume_seeker"
+        android:layout_toRightOf="@id/player_menu_details"
+        android:background="@drawable/btn_default_bg"
+        android:paddingBottom="@dimen/player_menu_img_padding_bottom"
+        android:scaleType="center"
+        android:src="@drawable/ic_player_menu_search_photo" />
+
+    <TextView
+        android:id="@+id/player_menu_search_photo_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/player_menu_search_photo"
+        android:layout_alignLeft="@id/player_menu_search_photo"
+        android:layout_alignRight="@id/player_menu_search_photo"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingBottom="@dimen/player_menu_txt_padding_bottom"
+        android:singleLine="true"
+        android:text="@string/player_menu_search_photo"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSmallSize" />
+
+</com.konka.music.ui.widget.TouchableRelativeLayout>

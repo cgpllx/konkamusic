@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center"
+    android:minHeight="@dimen/mysonglist_header_height"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/pl_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/add_playlist_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_default_bg"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/pl_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5.0dip"
+                android:scaleType="center"
+                android:src="@drawable/ic_create_playlist_default" />
+
+            <TextView
+                android:id="@+id/pl_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/mysonglist_header_height"
+                android:singleLine="true"
+                android:tag="@string/max_text_color"
+                android:text="新建歌单"
+                android:textColor="@color/max_text_color"
+                android:textSize="@dimen/song_list_primary_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pl_toggle_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip" >
+
+            <TextView
+                android:id="@+id/pl_songNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="歌曲75首"
+                android:textColor="@color/mysonglist_songscolor"
+                android:textSize="@dimen/song_list_primary_text_size" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

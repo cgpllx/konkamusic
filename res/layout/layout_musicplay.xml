@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/player_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/playback_backround" >
+
+    <RelativeLayout
+        android:id="@+id/player_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/play_button_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/button_backround_deep"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/button_back" />
+
+        <TextView
+            android:id="@+id/play_song_title"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white_translucence"
+            android:textIsSelectable="false" />
+
+        <ImageButton
+            android:id="@+id/play_more_functions"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:alpha="0.8"
+            android:background="@drawable/button_backround_deep"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/overflow_white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/player_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_play_panel"
+        android:orientation="vertical" >
+
+        <SeekBar
+            android:id="@+id/play_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="1000"
+            android:maxHeight="2dp"
+            android:minHeight="2dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/playback_playingbar_seekbar_style"
+            android:thumb="@drawable/playback_playingbar_seekbar_thumb" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/play_current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textIsSelectable="false"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/play_song_total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textIsSelectable="false"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/play_mode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_backround_deep"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/button_playmode_repeat_single" />
+
+            <ImageButton
+                android:id="@+id/play_playprevious"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_backround_deep"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/button_previous" />
+
+            <ImageButton
+                android:id="@+id/play_playbutton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_backround_deep"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/button_play" />
+
+            <ImageButton
+                android:id="@+id/play_playnext"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_backround_deep"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/button_next" />
+
+            <ImageButton
+                android:id="@+id/play_list"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_backround_deep"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/button_items"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/player_frame_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/player_bottom"
+        android:layout_below="@id/player_top" >
+
+        <com.konka.lrc.LyricView
+            android:id="@+id/lyricshow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </com.konka.lrc.LyricView>
+
+        <!-- <com.konka.music.lrc.LyricView -->
+        <!-- android:id="@+id/lyricshow" -->
+        <!-- android:clickable="false" -->
+        <!-- android:layout_width="match_parent" -->
+        <!-- android:layout_height="match_parent" /> -->
+
+
+        <!-- <ListView -->
+        <!-- android:id="@+id/lyricshow" -->
+        <!-- android:layout_width="match_parent" -->
+        <!-- android:layout_height="match_parent" -->
+        <!-- android:descendantFocusability="blocksDescendants" -->
+        <!-- android:divider="@color/transparent" -->
+        <!-- android:gravity="center" -->
+        <!-- android:scrollbars="none" /> -->
+
+        <TextView
+            android:id="@+id/lyric_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="15dip"
+            android:text="@string/there_is_no_lyric_yet"
+            android:textColor="@color/white"
+            android:textIsSelectable="false"
+            android:textSize="18sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</RelativeLayout>

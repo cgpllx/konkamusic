@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_player"
+    android:orientation="horizontal" >
+
+
+<!--     <RelativeLayout -->
+<!--         android:id="@+id/search_bar" -->
+<!--         android:layout_width="200dp" -->
+<!--         android:layout_height="100dp" > -->
+
+<!--             android:layout_centerVertical="true" -->
+<!--         <EditText -->
+<!--             android:id="@+id/search_text" -->
+<!--             style="@style/Kugou.Widget.Search.EditText" -->
+<!--             android:layout_width="fill_parent" -->
+<!--             android:layout_height="fill_parent" -->
+<!--             android:completionThreshold="1" -->
+<!--             android:dropDownVerticalOffset="1.0dip" -->
+<!--             android:hint="@string/singer_search_edit_hint" -->
+<!--             android:maxLength="50" -->
+<!--             android:imeOptions="actionSearch" -->
+<!--             android:singleLine="true" > -->
+
+<!--             <requestFocus /> -->
+<!--         </EditText> -->
+
+<!--         <ImageButton -->
+<!--             android:id="@+id/clear" -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="32.0dip" -->
+<!--             android:layout_centerVertical="true" -->
+<!--             android:background="@drawable/btn_clear_text_default" -->
+<!--             android:contentDescription="@string/app_name" -->
+<!--             android:paddingEnd="15dp" -->
+<!--             android:paddingLeft="0dp" -->
+<!--             android:paddingRight="15.0dip" -->
+<!--             android:paddingStart="0dp" -->
+<!--             android:visibility="visible" /> -->
+<!--     </RelativeLayout> -->
+
+<!--     <ImageButton -->
+<!--         android:id="@+id/search" -->
+<!--         android:layout_width="50.0dip" -->
+<!--         android:layout_height="199dp" -->
+<!--         android:background="@drawable/btn_default_bg2" -->
+<!--         android:contentDescription="@string/app_name" -->
+<!--         android:scaleType="center" -->
+<!--         android:src="@drawable/common_title_search_button_default" /> -->
+
+</LinearLayout> <!-- android:layout_centerVertical="true" -->
+

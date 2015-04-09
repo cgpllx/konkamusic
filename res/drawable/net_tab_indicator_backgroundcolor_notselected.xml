@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape>
+            <!-- 背景 -->
+            <solid android:color="@color/tabbg" />
+        </shape>
+    </item>
+<!--     <item android:bottom="3dp"> -->
+<!--         <shape> -->
+<!--             <solid android:color="#F5F5F5" /> -->
+<!--         </shape> -->
+<!--     </item> -->
+
+</layer-list>

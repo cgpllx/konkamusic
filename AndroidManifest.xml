@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.konka.music"
+    android:versionCode="10"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="20" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+
+    <permission
+        android:name="com.konka.music.permission.ACCESS_DOWNLOAD_MANAGER"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.konka.music.permission.ACCESS_DOWNLOAD_MANAGER_ADVANCED"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.konka.music.permission.SEND_DOWNLOAD_COMPLETED_INTENTS"
+        android:protectionLevel="normal" />
+
+    <application
+        android:name="com.konka.music.wedget.MusicApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:logo="@drawable/statusbar_logo_big_big"
+        android:theme="@style/Theme.Music_actionbarstyle" >
+        <activity
+            android:name="com.konka.music.ui.activity.SplashActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.konka.music.ui.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+<!--                 <category android:name="android.intent.category.LAUNCHER" /> -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.konka.music.ui.activity.PlayerActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="content" />
+                <data android:scheme="file" />
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="application/ogg" />
+                <data android:mimeType="application/x-ogg" />
+                <data android:mimeType="application/itunes" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:pathPattern=".*\\.mp3" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.konka.music.ui.activity.SettingActivityFragment"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.konka.music.ui.activity.AlarmActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.konka.music.ui.activity.FeedBackActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.konka.music.ui.activity.SwitchCachePath"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.konka.music.ui.activity.AboutActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.konka.music.ui.activity.GuideActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+
+        <service android:name="com.konka.music.service.ShakeService" >
+            <intent-filter>
+                <action android:name="com.konka.music.action_start_service" />
+                <action android:name="com.konka.music.action_stop_service" />
+            </intent-filter>
+        </service>
+
+        <!-- android:process="remote" > -->
+        <service
+            android:name="com.konka.music.service.MusicService"
+            android:enabled="true"
+            android:priority="1000" >
+            <intent-filter>
+                <action android:name="com.konka.music.service.MusicService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="com.konka.music.core.providers.downloads.DownloadProvider"
+            android:authorities="com.konka.music.downloads" />
+
+        <service android:name="com.konka.music.core.providers.downloads.DownloadService" />
+
+        <receiver android:name="com.konka.music.service.AlarmBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="com.konka.music.BROADCAST_ACTION_ALARM" />
+                <action android:name="com.konka.music.BROADCAST_ACTION_PAUSE" />
+                <action android:name="com.konka.music.BROADCAST_ACTION_STOP" />
+                <action android:name="com.konka.music.BROADCAST_ACTION_EXIT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.konka.music.receiver.MusicDownloadComplete" >
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+                <action android:name="android.intent.action.MEDIA_SCANNER_STARTED" />
+                <action android:name="android.intent.action.MEDIA_SCANNER_FINISHED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.konka.music.core.providers.downloads.DownloadReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- <service android:name="com.ouyang.music.showlock.LockService" /> -->
+
+        <activity
+            android:name="com.ouyang.music.showlock.ShowLockActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Wallpaper.NoTitleBar" >
+        </activity>
+    </application>
+
+</manifest>

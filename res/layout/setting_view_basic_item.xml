@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/setting_view_basic_item_h_container"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="left|center_vertical"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/mWidgetRowAction_Icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/mWidgetRow_Label"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/mWidgetRow_Value"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center_vertical|right"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp " />
+
+    <FrameLayout
+        android:id="@+id/mWidgetRow_Type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:paddingRight="10dp"
+        android:visibility="visible" >
+    </FrameLayout>
+
+    <!-- <ImageView -->
+    <!-- android:id="@+id/mWidgetRow_righ_Common_arrow" -->
+    <!-- style="@style/SettingViewArrow" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:background="@android:color/transparent" -->
+    <!-- android:contentDescription="@string/app_name" -->
+    <!-- android:paddingRight="10dp" -->
+    <!-- android:scaleType="centerInside" -->
+    <!-- android:visibility="visible" /> -->
+
+</LinearLayout>

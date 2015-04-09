@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.kugou.android"
+    android:id="@+id/search_result_scroll_bar"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/search_correctter_text_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_player" >
+
+        <TextView
+            android:id="@+id/search_correctter_text"
+            android:layout_width="fill_parent"
+            android:layout_height="30.0dip"
+            android:layout_marginLeft="@dimen/search_bar_margin_left"
+            android:layout_marginRight="@dimen/search_bar_margin_left"
+            android:layout_marginTop="5.0dip"
+            android:background="@drawable/correct_bg"
+            android:minHeight="30.0dip"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/scroll_bar_bg_view"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/search_relative_info_view_height"
+        android:layout_below="@id/search_correctter_text_container"
+        android:background="@drawable/bg_player" />
+
+    <LinearLayout
+        android:id="@+id/layout_scroll_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/search_relative_info_grid_view_height"
+        android:layout_below="@id/search_correctter_text_container"
+        android:layout_marginLeft="@dimen/search_bar_margin_left"
+        android:layout_marginRight="@dimen/search_bar_margin_left"
+        android:background="@drawable/search_relative_info_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="5.0dip"
+        android:paddingRight="5.0dip" >
+
+        <GridView
+            android:id="@+id/layout_scroll_bar_grid_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@drawable/transparent"
+            android:numColumns="2"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/search_tab_bar_height"
+        android:layout_below="@id/scroll_bar_bg_view"
+        android:background="@drawable/bg_player"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/search_tab_bar_padding_top" >
+
+        <RadioGroup
+            android:id="@+id/search_result_sub_tab_radio_group"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:fadingEdgeLength="0.0dip"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/search_result_sub_tab_song"
+                style="@style/Kugou.Widget.SecondTab.RadioButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="#00000000"
+                android:checked="true"
+                android:paddingBottom="@dimen/net_media_radio_group_margintop"
+                android:paddingTop="@dimen/net_media_radio_group_margintop"
+                android:tag="skin_tab_radiobutton_search_color"
+                android:text="@string/search_song"
+                android:textColor="@color/skin_tab_radiobutton_search_color"
+                android:textSize="@dimen/textLargeSize" />
+
+            <RadioButton
+                android:id="@+id/search_result_sub_tab_mv"
+                style="@style/Kugou.Widget.SecondTab.RadioButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="#00000000"
+                android:paddingBottom="@dimen/net_media_radio_group_margintop"
+                android:paddingTop="@dimen/net_media_radio_group_margintop"
+                android:tag="skin_tab_radiobutton_search_color"
+                android:text="@string/search_mv"
+                android:textColor="@color/skin_tab_radiobutton_search_color"
+                android:textSize="@dimen/textLargeSize" />
+
+            <RadioButton
+                android:id="@+id/search_result_sub_tab_album"
+                style="@style/Kugou.Widget.SecondTab.RadioButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="#00000000"
+                android:paddingBottom="@dimen/net_media_radio_group_margintop"
+                android:paddingTop="@dimen/net_media_radio_group_margintop"
+                android:tag="skin_tab_radiobutton_search_color"
+                android:text="@string/search_album"
+                android:textColor="@color/skin_tab_radiobutton_search_color"
+                android:textSize="@dimen/textLargeSize" />
+
+            <RadioButton
+                android:id="@+id/search_result_sub_tab_recommand"
+                style="@style/Kugou.Widget.SecondTab.RadioButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="#00000000"
+                android:paddingBottom="@dimen/net_media_radio_group_margintop"
+                android:paddingTop="@dimen/net_media_radio_group_margintop"
+                android:tag="skin_tab_radiobutton_search_color"
+                android:text="@string/search_recommand"
+                android:textColor="@color/skin_tab_radiobutton_search_color"
+                android:textSize="@dimen/textLargeSize" />
+
+            <RadioButton
+                android:id="@+id/search_result_sub_tab_user"
+                style="@style/Kugou.Widget.SecondTab.RadioButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="#00000000"
+                android:paddingBottom="@dimen/net_media_radio_group_margintop"
+                android:paddingTop="@dimen/net_media_radio_group_margintop"
+                android:tag="skin_tab_radiobutton_search_color"
+                android:text="@string/search_user"
+                android:textColor="@color/skin_tab_radiobutton_search_color"
+                android:textSize="@dimen/textLargeSize" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/search_result_color_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/search_result_sub_tab_song_linearlayout"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/net_main_view_hight"
+                android:layout_weight="1.0"
+                android:background="@color/bg_light_default_color"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/net_media_linear_marginleft"
+                android:paddingRight="@dimen/net_media_linear_marginright"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/search_result_sub_tab_mv_linearlayout"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/net_main_view_hight"
+                android:layout_weight="1.0"
+                android:background="@color/bg_light_default_color"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/net_media_linear_marginleft"
+                android:paddingRight="@dimen/net_media_linear_marginright"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/search_result_sub_tab_album_linearlayout"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/net_main_view_hight"
+                android:layout_weight="1.0"
+                android:background="@color/bg_light_default_color"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/net_media_linear_marginleft"
+                android:paddingRight="@dimen/net_media_linear_marginright"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/search_result_sub_tab_recommand_linearlayout"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/net_main_view_hight"
+                android:layout_weight="1.0"
+                android:background="@color/bg_light_default_color"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/net_media_linear_marginleft"
+                android:paddingRight="@dimen/net_media_linear_marginright"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/search_result_sub_tab_user_linearlayout"
+                android:layout_width="0.0dip"
+                android:layout_height="@dimen/net_main_view_hight"
+                android:layout_weight="1.0"
+                android:background="@color/bg_light_default_color"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/net_media_linear_marginleft"
+                android:paddingRight="@dimen/net_media_linear_marginright"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="2.0px"
+            android:background="@color/skin_divider_color_with_transparent"
+            android:tag="0.5" />
+    </LinearLayout>
+
+</RelativeLayout>

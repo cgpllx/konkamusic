@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/player_queue_cancel_layer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/transparent"
+    android:gravity="top|right"  >
+
+    <RelativeLayout
+        android:layout_width="@dimen/player_queue_width"
+        android:layout_height="@dimen/player_queue_height"
+        android:layout_marginTop="@dimen/player_top_btn_size"
+        android:background="@drawable/bg_player_queue"
+        android:minHeight="@dimen/player_queue_height"
+        android:minWidth="@dimen/player_queue_width" >
+
+        <ImageView
+            android:id="@+id/player_queue_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/player_queue_empty"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/player_queue_clean"
+            android:layout_width="@dimen/player_queue_title_height"
+            android:layout_height="@dimen/player_queue_title_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/btn_default_bg"
+            android:scaleType="center"
+            android:src="@drawable/ic_player_playlist_delete"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/player_queue_title"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/player_queue_title_height"
+            android:layout_marginLeft="2.0dip"
+            android:layout_toLeftOf="@id/player_queue_clean"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/common_blue"
+            android:textSize="@dimen/textLargeSize"
+            android:text="@string/app_name"
+            android:visibility="gone" /> <!-- @color/theme_text_color_no_black -->
+
+        <View
+            android:id="@+id/player_queue_line"
+            android:layout_width="fill_parent"
+            android:layout_height="2.0px"
+            android:layout_below="@id/player_queue_clean"
+            android:background="@color/common_blue"
+            android:visibility="gone" /> <!-- @color/skin_color_divider_color -->
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/player_queue_line"
+            layout="@layout/common_listview"
+            android:visibility="gone"
+             />
+    </RelativeLayout>
+
+</RelativeLayout>

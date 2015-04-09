@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/statusbar_artist_image"
+            android:layout_width="64.0dip"
+            android:layout_height="64.0dip"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/statusbar_logo_big_big"
+             />
+
+        <ImageView
+            android:id="@+id/kugou_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/statusbar_artist_image"
+            android:layout_alignRight="@id/statusbar_artist_image"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/statusbar_logo_small"
+            android:visibility="gone"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageButton
+            android:id="@+id/statusbar_super_content_close_btn"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_default_bg"
+            android:contentDescription="@string/app_name"
+            android:padding="10.0dip"
+            android:src="@drawable/statusbar_btn_close" />
+
+        <ImageButton
+            android:id="@+id/statusbar_super_content_next_btn"
+            android:layout_width="45.0dip"
+            android:layout_height="45.0dip"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/statusbar_super_content_close_btn"
+            android:background="@drawable/btn_default_bg"
+            android:contentDescription="@string/app_name"
+            android:padding="10.0dip"
+            android:src="@drawable/statusbar_btn_next" />
+
+        <ImageButton
+            android:id="@+id/statusbar_super_content_pause_or_play"
+            android:layout_width="45.0dip"
+            android:layout_height="45.0dip"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/statusbar_super_content_next_btn"
+            android:background="@drawable/btn_default_bg"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/statusbar_btn_play" />
+
+        <TextView
+            android:id="@+id/statusbar_track_name"
+            style="@style/KugouNotificationText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toLeftOf="@id/statusbar_super_content_pause_or_play"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:scrollHorizontally="true"
+            android:text="@string/app_name" />
+    </RelativeLayout>
+
+</LinearLayout>

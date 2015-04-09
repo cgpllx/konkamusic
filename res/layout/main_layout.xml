@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/skin_bg_player_x"
+    android:id="@+id/maincontent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="30dp" >
+
+        <include
+            layout="@layout/navigation_search"
+            android:visibility="visible"
+            android:paddingTop="10dp" />
+
+        <include
+            layout="@layout/main_localmusic_layout"
+            android:paddingTop="10dp" />
+
+        <include
+            layout="@layout/navigation_netentry"
+            android:paddingTop="10dp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/lable_special_list_item_height"
+    android:paddingLeft="@dimen/lable_special_list_item_paddingleft"
+    android:paddingRight="@dimen/lable_special_list_item_paddingright" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingBottom="@dimen/lable_top_list_item_paddingtop"
+        android:paddingTop="@dimen/lable_top_list_item_paddingtop" >
+
+        <LinearLayout
+            android:id="@+id/singer_item"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/list_item_height"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/singer_icon"
+                android:layout_width="@dimen/singer_list_image_size"
+                android:layout_height="@dimen/singer_list_image_size"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/singer_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:tag="@string/max_text_color"
+                android:textColor="@color/max_text_color"
+                android:textSize="@dimen/main_bar_title_text_size" />
+
+            <TextView
+                android:id="@+id/songs_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="5.0dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:tag="@string/max_text_color"
+                android:textColor="@color/max_text_color"
+                android:textSize="@dimen/main_bar_subtitle_text_size" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <include layout="@layout/common_listview_divider" />
+
+</RelativeLayout>

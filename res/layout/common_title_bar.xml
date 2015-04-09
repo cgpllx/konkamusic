@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common_title_bar"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/common_title_bar_height"
+    android:background="@color/theme_color_0_default"
+    android:tag="@string/skin_title_backgroud" >
+
+    <View
+        android:id="@+id/common_titile_shadow"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_title_bar_height"
+        android:background="@drawable/bg_common_title_bar"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <ImageButton
+        android:id="@+id/common_title_bar_btn_back"
+        android:layout_width="@dimen/common_title_bar_icon_width"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/bg_common_title_bar_btn"
+        android:scaleType="center"
+        android:src="@drawable/ic_common_title_bar_back" />
+
+    <LinearLayout
+        android:id="@+id/common_title_bar_btns"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/common_title_bar_btn_ok"
+            android:layout_width="@dimen/common_title_bar_icon_width"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bg_common_title_bar_btn"
+            android:scaleType="center"
+            android:src="@drawable/ic_common_title_bar_ok" />
+
+        <ImageButton
+            android:id="@+id/common_title_bar_btn_edit"
+            android:layout_width="@dimen/common_title_bar_icon_width"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bg_common_title_bar_btn"
+            android:scaleType="center"
+            android:src="@drawable/ic_common_title_bar_edit" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/common_title_bar_btn_mv"
+                android:layout_width="@dimen/common_title_bar_icon_width"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_common_title_bar_btn"
+                android:scaleType="center"
+                android:src="@drawable/ic_common_title_bar_mv" />
+
+            <ImageView
+                android:id="@+id/common_title_bar_btn_mv_notify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/common_title_bar_btn_mv"
+                android:padding="7.0dip"
+                android:src="@drawable/ic_mv_cache_notify"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/common_title_bar_btn_custom"
+            android:layout_width="@dimen/common_title_bar_icon_width"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bg_common_title_bar_btn"
+            android:scaleType="center" />
+
+        <TextView
+            android:id="@+id/common_title_bar_txt_btn_custom"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/common_title_bar_text_button_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/common_title_bar_text_to_right"
+            android:background="@drawable/common_title_text_button_bg"
+            android:drawablePadding="@dimen/common_title_bar_text_button_drawable_padding"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="@dimen/common_title_bar_text_button_padding_left"
+            android:paddingRight="@dimen/common_title_bar_text_button_padding_right"
+            android:singleLine="true"
+            android:textColor="@color/white" />
+
+        <ImageButton
+            android:id="@+id/common_title_bar_btn_search"
+            android:layout_width="@dimen/common_title_bar_icon_width"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bg_common_title_bar_btn"
+            android:scaleType="center"
+            android:src="@drawable/ic_common_title_bar_search" />
+
+        <ImageButton
+            android:id="@+id/common_title_bar_btn_menu"
+            android:layout_width="@dimen/common_title_bar_icon_width"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bg_common_title_bar_btn"
+            android:scaleType="center"
+            android:src="@drawable/ic_common_title_bar_menu" />
+
+        <ImageButton
+            android:id="@+id/common_title_bar_btn_finish"
+            android:layout_width="@dimen/common_title_bar_icon_width"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bg_common_title_bar_btn"
+            android:scaleType="center"
+            android:src="@drawable/ic_common_title_bar_finish"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="@dimen/common_title_bar_text_width"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true" >
+
+        <TextView
+            android:id="@+id/common_title_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/main_bar_title_text_size" />
+    </FrameLayout>
+
+</RelativeLayout>

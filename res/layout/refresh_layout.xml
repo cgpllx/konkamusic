@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_player"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/playing_bar_height_without_shadow" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5.0dip"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_network_error" />
+
+    <Button
+        android:id="@+id/btn_refresh"
+        style="@style/Kugou.Widget.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:text="@string/commond_retry_connect"
+        android:textSize="@dimen/textMediumSize" />
+
+</LinearLayout>
